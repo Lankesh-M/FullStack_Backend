@@ -1,0 +1,48 @@
+### GET / endpoint
+GET  http://localhost:5000/
+
+
+### Post /auth/register endpoint
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username" : "raghul3",
+    "password" : "12345"
+}
+
+### Post /auth/login endpoint
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "username" : "raghul3",
+    "password" : "12345"
+}
+
+
+### GET /todos 
+GET http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzMzMjQwNjIwLCJleHAiOjE3MzMzMjcwMjB9.euaUy2gvpVU05UkNXyJN_-QCNEAYDcPNDUKM49N4F8k
+
+### creat new todo POST /todos
+POST http://localhost:5000/todos
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzMzMjQwNjIwLCJleHAiOjE3MzMzMjcwMjB9.euaUy2gvpVU05UkNXyJN_-QCNEAYDcPNDUKM49N4F8k
+
+{
+    "task" : "Complete Coding project"
+}
+
+### Update a todo PUT /TODOS/:ID (protected) 
+PUT http://localhost:5000/todos/3?page=4 
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzMzMjQwMTM2LCJleHAiOjE3MzMzMjY1MzZ9.lWh64Qm2EAKobFOyH2juGlRxRVTAJ9puLV6lKiRlWWs 
+Content-Type: application/json
+
+{
+    "completed": 1
+}
+
+### Delete a todo DELETE /TODOS/:ID (protected) 
+DELETE http://localhost:5000/todos/2 
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzMzMjQwNjIwLCJleHAiOjE3MzMzMjcwMjB9.euaUy2gvpVU05UkNXyJN_-QCNEAYDcPNDUKM49N4F8k
